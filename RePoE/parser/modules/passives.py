@@ -86,7 +86,7 @@ class passives(Parser_Module):
         bg = row["BackgroundArt"]
         for size in ["Small", "Medium", "Large"]:
             for blank in [False, True]:
-                result[f"group_bg_{size.lower()}_{"blank" if blank else "normal"}"] = bg[
+                result[f"group_bg_{size.lower()}_{'blank' if blank else 'normal'}"] = bg[
                     f"{size}{'Blank' if blank else ''}"
                 ]
         for size in ["Passive", "Notable", "Keystone"]:

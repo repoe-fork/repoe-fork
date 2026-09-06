@@ -73,7 +73,7 @@ def uiart(row):
     result = {"id": row["Id"], "glow": row["Glow"]}
     for size in ["Small", "Medium", "Large"]:
         for blank in [False, True]:
-            result[f"group_bg_{size.lower()}_{"blank" if blank else "normal"}"] = row[
+            result[f"group_bg_{size.lower()}_{'blank' if blank else 'normal'}"] = row[
                 f"GroupBackground{size}{'Blank' if blank else ''}"
             ]
     for size in ["Passive", "Notable", "Keystone", "Jewel", "AscendancyStart"]:
