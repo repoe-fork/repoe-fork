@@ -158,7 +158,7 @@ class base_items(Parser_Module):
             itfiles[it_path] = itfile
             inherited_tags = list(itfile["Base"]["tag"])
             mod_domain = item["ModDomain"]
-            mod_domain = MOD_DOMAIN(mod_domain) if mod_domain and mod_domain in MOD_DOMAIN else None
+            mod_domain = MOD_DOMAIN._value2member_map_.get(mod_domain)
             item_id = item["Id"]
             item_class = item["ItemClass"]["Id"]
             properties: Dict = {}
